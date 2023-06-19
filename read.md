@@ -6,7 +6,7 @@
 
 为了提高当前基于元学习的 FSOD 方法的泛化能力， TIP 方法在引导提取分支和查询预测分支上应用了一致性正则化。 对于引导提取分支，TIP模型在原始图像及其变换变体的引导向量上开发了TGC 损失函数，以在它们之间施加一致性。 对于查询预测分支，TIP首先预测变换图像的 RoI 建议来引入一致性正则化，然后根据这些 RoI 感兴趣区域的建议以及引导提取分支提取的变换不变引导向量，推测样本的边界框。
 
-![TIP模型结构图](D:\GitLoad\TIPFSOD\img\image-framework.png"图1 TIP模型结构图")
+![TIP模型结构图](img\image-framework.png"图1 TIP模型结构图")
 
 ## 2. 数据集介绍
 
@@ -69,7 +69,7 @@ data/coco
 
 MSAdapter的API完全参照PyTorch设计，用户仅需少量修改就能轻松地将PyTorch代码高效运行在昇腾上。目前MSAdapter已经适配**torch、torch.nn、torch.nn.function、torch.linalg**等800+接口；全面支持**torchvision**；并且在MSAdapterModelZoo中验证了70+主流PyTorch模型的迁移。
 
-![MSadapter层次结构图](D:\GitLoad\TIPFSOD\img\MSA_F.png"图2 MSadapter层次结构图")
+![MSadapter层次结构图](img\MSA_F.png"图2 MSadapter层次结构图")
 
 ### 3.1 MSadapter安装
 
@@ -214,21 +214,21 @@ bash run/test_coco.sh
 
 三种不同的数据划分方式，IoU的阈值设置为0.5，实验结果如下：
 
-![实验结果1](D:\GitLoad\TIPFSOD\img\FSODresult.png"图3 实验结果图")
+![实验结果1](img\FSODresult.png"图3 实验结果图")
 
 其中，Baseline为论文[Few-shot Object Detection and Viewpoints Estimation for Objects in the wild](https://github.com/YoungXIAO13/FewShotDetection#installation)中使用的模型，TIP为该论文的模型复现结果。
 
 在PASCAL VOC数据集上Baseline实验结果可视化：
 
-![BaseLine可视化](D:\GitLoad\TIPFSOD\img\BaselineVision.png"图4 BaseLine可视化结果图")
+![BaseLine可视化](img\BaselineVision.png"图4 BaseLine可视化结果图")
 
-![TIP可视化](D:\GitLoad\TIPFSOD\img\TIPVision.png"图4 TIP可视化结果图")
+![TIP可视化](img\TIPVision.png"图4 TIP可视化结果图")
 
 **COCO**
 
 在 COCO 数据集的实验结果如下表所示：
 
-![COCO实验结果图](D:\GitLoad\TIPFSOD\img\COCOresult.png"图5 COCO实验结果结果图")
+![COCO实验结果图](img\COCOresult.png"图5 COCO实验结果结果图")
 
 其中，K代表Shots的个数。
 

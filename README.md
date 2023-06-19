@@ -69,7 +69,7 @@ data/coco
 
 MSAdapter的API完全参照PyTorch设计，用户仅需少量修改就能轻松地将PyTorch代码高效运行在昇腾上。目前MSAdapter已经适配**torch、torch.nn、torch.nn.function、torch.linalg**等800+接口；全面支持**torchvision**；并且在MSAdapterModelZoo中验证了70+主流PyTorch模型的迁移。
 
-![MSadapter层次结构图](img\MSA_F.png"图2 MSadapter层次结构图")
+![](img/MSA_F.png)
 
 ### 3.1 MSadapter安装
 

@@ -6,7 +6,7 @@
 
 为了提高当前基于元学习的 FSOD 方法的泛化能力， TIP 方法在引导提取分支和查询预测分支上应用了一致性正则化。 对于引导提取分支，TIP模型在原始图像及其变换变体的引导向量上开发了TGC 损失函数，以在它们之间施加一致性。 对于查询预测分支，TIP首先预测变换图像的 RoI 建议来引入一致性正则化，然后根据这些 RoI 感兴趣区域的建议以及引导提取分支提取的变换不变引导向量，推测样本的边界框。
 
-<img src="img/image-framework.png" alt="image-framework.png"  />
+![](img/image-framework.png)
 
 ## 2. 数据集介绍
 
@@ -214,21 +214,21 @@ bash run/test_coco.sh
 
 三种不同的数据划分方式，IoU的阈值设置为0.5，实验结果如下：
 
-![实验结果1](img\FSODresult.png"图3 实验结果图")
+![](img/FSODresult.png)
 
 其中，Baseline为论文[Few-shot Object Detection and Viewpoints Estimation for Objects in the wild](https://github.com/YoungXIAO13/FewShotDetection#installation)中使用的模型，TIP为该论文的模型复现结果。
 
 在PASCAL VOC数据集上Baseline实验结果可视化：
 
-![BaseLine可视化](img\BaselineVision.png"图4 BaseLine可视化结果图")
+![](img/BaselineVision.png)
 
-![TIP可视化](img\TIPVision.png"图4 TIP可视化结果图")
+![](img/TIPVision.png)
 
 **COCO**
 
 在 COCO 数据集的实验结果如下表所示：
 
-![COCO实验结果图](img\COCOresult.png"图5 COCO实验结果结果图")
+![](img/COCOresult.png)
 
 其中，K代表Shots的个数。
 
